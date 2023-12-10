@@ -33,5 +33,14 @@ namespace Project
         {
             Application.Exit();
         }
+
+        private void LogInBtn_Click(object sender, EventArgs e)
+        {
+            if(ID.Text == "")
+            {
+
+            }
+            else { MessageBox.Show("Unknown Data"); }
+        }
     }
 }

@@ -32,7 +32,7 @@
             label3 = new Label();
             panel1 = new Panel();
             Section = new TextBox();
-            button2 = new Button();
+            Exit = new Button();
             label1 = new Label();
             StudentName = new TextBox();
             RegisterBtn = new Button();
@@ -57,7 +57,7 @@
             // 
             panel1.BackColor = Color.WhiteSmoke;
             panel1.Controls.Add(Section);
-            panel1.Controls.Add(button2);
+            panel1.Controls.Add(Exit);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(StudentName);
@@ -82,21 +82,21 @@
             Section.Size = new Size(448, 72);
             Section.TabIndex = 19;
             // 
-            // button2
+            // Exit
             // 
-            button2.BackgroundImageLayout = ImageLayout.Stretch;
-            button2.Cursor = Cursors.Hand;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.Location = new Point(500, 23);
-            button2.Margin = new Padding(2);
-            button2.Name = "button2";
-            button2.Size = new Size(43, 34);
-            button2.TabIndex = 18;
-            button2.Text = "X";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            Exit.BackgroundImageLayout = ImageLayout.Stretch;
+            Exit.Cursor = Cursors.Hand;
+            Exit.FlatAppearance.BorderSize = 0;
+            Exit.FlatStyle = FlatStyle.Flat;
+            Exit.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Exit.Location = new Point(500, 23);
+            Exit.Margin = new Padding(2);
+            Exit.Name = "Exit";
+            Exit.Size = new Size(43, 34);
+            Exit.TabIndex = 18;
+            Exit.Text = "X";
+            Exit.UseVisualStyleBackColor = true;
+            Exit.Click += button2_Click;
             // 
             // label1
             // 
@@ -201,7 +201,7 @@
         private System.Windows.Forms.TextBox ID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Exit;
         private System.Windows.Forms.TextBox Section;
     }
 }

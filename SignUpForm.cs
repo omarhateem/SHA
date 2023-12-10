@@ -108,9 +108,6 @@ namespace Project
             if (ID.Text == "admin" && StudentName.Text == "admin")
             {
                 this.Hide();
-                //show the main page ya khatab
-
-
             }
             else
             {

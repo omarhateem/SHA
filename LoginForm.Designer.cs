@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            button2 = new Button();
+            Exit = new Button();
             SignUpBtn = new Button();
             label1 = new Label();
             label3 = new Label();
@@ -41,7 +41,7 @@
             // panel1
             // 
             panel1.BackColor = Color.WhiteSmoke;
-            panel1.Controls.Add(button2);
+            panel1.Controls.Add(Exit);
             panel1.Controls.Add(SignUpBtn);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(label3);
@@ -53,20 +53,20 @@
             panel1.Size = new Size(567, 695);
             panel1.TabIndex = 3;
             // 
-            // button2
+            // Exit
             // 
-            button2.BackgroundImageLayout = ImageLayout.Stretch;
-            button2.Cursor = Cursors.Hand;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.Location = new Point(515, 10);
-            button2.Name = "button2";
-            button2.Size = new Size(30, 52);
-            button2.TabIndex = 20;
-            button2.Text = "X";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            Exit.BackgroundImageLayout = ImageLayout.Stretch;
+            Exit.Cursor = Cursors.Hand;
+            Exit.FlatAppearance.BorderSize = 0;
+            Exit.FlatStyle = FlatStyle.Flat;
+            Exit.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Exit.Location = new Point(515, 10);
+            Exit.Name = "Exit";
+            Exit.Size = new Size(30, 52);
+            Exit.TabIndex = 20;
+            Exit.Text = "X";
+            Exit.UseVisualStyleBackColor = true;
+            Exit.Click += button2_Click;
             // 
             // SignUpBtn
             // 
@@ -122,6 +122,7 @@
             LogInBtn.TabIndex = 9;
             LogInBtn.Text = "Login";
             LogInBtn.UseVisualStyleBackColor = false;
+            LogInBtn.Click += LogInBtn_Click;
             // 
             // ID
             // 
@@ -159,6 +160,6 @@
         private System.Windows.Forms.Button LogInBtn;
         private System.Windows.Forms.TextBox ID;
         private System.Windows.Forms.Button SignUpBtn;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Exit;
     }
 }
