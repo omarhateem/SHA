@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.Logging;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,22 @@ namespace Project
         public LoginForm()
         {
             InitializeComponent();
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            SignUpForm SignUp = new SignUpForm();
+            this.Hide();
+            SignUp.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
