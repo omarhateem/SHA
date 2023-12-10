@@ -30,11 +30,11 @@
         {
             panel1 = new Panel();
             button2 = new Button();
-            button3 = new Button();
+            SignUpBtn = new Button();
             label1 = new Label();
             label3 = new Label();
-            button1 = new Button();
-            username = new TextBox();
+            LogInBtn = new Button();
+            ID = new TextBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -42,15 +42,15 @@
             // 
             panel1.BackColor = Color.WhiteSmoke;
             panel1.Controls.Add(button2);
-            panel1.Controls.Add(button3);
+            panel1.Controls.Add(SignUpBtn);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(label3);
-            panel1.Controls.Add(button1);
-            panel1.Controls.Add(username);
+            panel1.Controls.Add(LogInBtn);
+            panel1.Controls.Add(ID);
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(4, 5, 4, 5);
             panel1.Name = "panel1";
-            panel1.Size = new Size(567, 930);
+            panel1.Size = new Size(567, 695);
             panel1.TabIndex = 3;
             // 
             // button2
@@ -68,29 +68,29 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
-            // button3
+            // SignUpBtn
             // 
-            button3.BackColor = Color.FromArgb(254, 161, 22);
-            button3.Cursor = Cursors.Hand;
-            button3.FlatAppearance.BorderColor = Color.FromArgb(254, 161, 22);
-            button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(254, 161, 22);
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Microsoft Sans Serif", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(54, 538);
-            button3.Name = "button3";
-            button3.Size = new Size(450, 71);
-            button3.TabIndex = 19;
-            button3.Text = "Don't have an account?";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
+            SignUpBtn.BackColor = Color.FromArgb(254, 161, 22);
+            SignUpBtn.Cursor = Cursors.Hand;
+            SignUpBtn.FlatAppearance.BorderColor = Color.FromArgb(254, 161, 22);
+            SignUpBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(254, 161, 22);
+            SignUpBtn.FlatStyle = FlatStyle.Flat;
+            SignUpBtn.Font = new Font("Microsoft Sans Serif", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            SignUpBtn.ForeColor = Color.White;
+            SignUpBtn.Location = new Point(54, 538);
+            SignUpBtn.Name = "SignUpBtn";
+            SignUpBtn.Size = new Size(450, 71);
+            SignUpBtn.TabIndex = 19;
+            SignUpBtn.Text = "Don't have an account?";
+            SignUpBtn.UseVisualStyleBackColor = false;
+            SignUpBtn.Click += button3_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.DarkGray;
-            label1.Location = new Point(128, 140);
+            label1.Location = new Point(137, 151);
             label1.Name = "label1";
             label1.Size = new Size(278, 33);
             label1.TabIndex = 11;
@@ -99,51 +99,52 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Microsoft Sans Serif", 25.25F, FontStyle.Bold);
+            label3.Font = new Font("Microsoft Uighur", 36F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Black;
             label3.Location = new Point(194, 51);
             label3.Name = "label3";
-            label3.Size = new Size(168, 59);
+            label3.Size = new Size(173, 85);
             label3.TabIndex = 0;
             label3.Text = "Login ";
             // 
-            // button1
+            // LogInBtn
             // 
-            button1.BackColor = Color.FromArgb(69, 130, 255);
-            button1.Cursor = Cursors.Hand;
-            button1.FlatAppearance.BorderColor = Color.FromArgb(44, 105, 141);
-            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(44, 105, 141);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(54, 403);
-            button1.Name = "button1";
-            button1.Size = new Size(450, 71);
-            button1.TabIndex = 9;
-            button1.Text = "Login";
-            button1.UseVisualStyleBackColor = false;
+            LogInBtn.BackColor = Color.FromArgb(69, 130, 255);
+            LogInBtn.Cursor = Cursors.Hand;
+            LogInBtn.FlatAppearance.BorderColor = Color.FromArgb(44, 105, 141);
+            LogInBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(44, 105, 141);
+            LogInBtn.FlatStyle = FlatStyle.Flat;
+            LogInBtn.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold);
+            LogInBtn.ForeColor = Color.White;
+            LogInBtn.Location = new Point(54, 403);
+            LogInBtn.Name = "LogInBtn";
+            LogInBtn.Size = new Size(450, 71);
+            LogInBtn.TabIndex = 9;
+            LogInBtn.Text = "Login";
+            LogInBtn.UseVisualStyleBackColor = false;
             // 
-            // username
+            // ID
             // 
-            username.BackColor = SystemColors.Menu;
-            username.Font = new Font("Microsoft Sans Serif", 13.25F, FontStyle.Bold);
-            username.ForeColor = SystemColors.ScrollBar;
-            username.Location = new Point(56, 259);
-            username.Multiline = true;
-            username.Name = "username";
-            username.Size = new Size(448, 72);
-            username.TabIndex = 6;
-            username.Text = "\U0001faaa ID";
+            ID.BackColor = SystemColors.Menu;
+            ID.Font = new Font("Microsoft Sans Serif", 13.25F, FontStyle.Bold);
+            ID.ForeColor = SystemColors.ScrollBar;
+            ID.Location = new Point(56, 259);
+            ID.Multiline = true;
+            ID.Name = "ID";
+            ID.PlaceholderText = "\U0001faaa ID";
+            ID.Size = new Size(448, 72);
+            ID.TabIndex = 6;
             // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(569, 931);
+            ClientSize = new Size(569, 695);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4, 5, 4, 5);
             Name = "LoginForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "LoginForm";
             Load += LoginForm_Load;
             panel1.ResumeLayout(false);
@@ -155,9 +156,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox username;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button LogInBtn;
+        private System.Windows.Forms.TextBox ID;
+        private System.Windows.Forms.Button SignUpBtn;
         private System.Windows.Forms.Button button2;
     }
 }

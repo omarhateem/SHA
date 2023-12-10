@@ -2,6 +2,7 @@
 {
     partial class SignUpForm
     {
+
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -30,12 +31,12 @@
         {
             label3 = new Label();
             panel1 = new Panel();
-            textBox1 = new TextBox();
+            Section = new TextBox();
             button2 = new Button();
             label1 = new Label();
-            password = new TextBox();
-            button1 = new Button();
-            username = new TextBox();
+            StudentName = new TextBox();
+            RegisterBtn = new Button();
+            ID = new TextBox();
             button5 = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -45,7 +46,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Microsoft Sans Serif", 25.25F, FontStyle.Bold);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(118, 35);
+            label3.Location = new Point(187, 41);
             label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
             label3.Size = new Size(212, 59);
@@ -55,30 +56,31 @@
             // panel1
             // 
             panel1.BackColor = Color.WhiteSmoke;
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(Section);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(label3);
-            panel1.Controls.Add(password);
-            panel1.Controls.Add(button1);
-            panel1.Controls.Add(username);
+            panel1.Controls.Add(StudentName);
+            panel1.Controls.Add(RegisterBtn);
+            panel1.Controls.Add(ID);
+            panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(439, 606);
+            panel1.Size = new Size(569, 711);
             panel1.TabIndex = 2;
             // 
-            // textBox1
+            // Section
             // 
-            textBox1.BackColor = SystemColors.Menu;
-            textBox1.Font = new Font("Microsoft Sans Serif", 16.25F, FontStyle.Bold);
-            textBox1.ForeColor = Color.FromArgb(203, 203, 205);
-            textBox1.Location = new Point(75, 354);
-            textBox1.Margin = new Padding(2);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(300, 48);
-            textBox1.TabIndex = 19;
-            textBox1.Text = "  Section";
+            Section.BackColor = SystemColors.Menu;
+            Section.Font = new Font("Microsoft Sans Serif", 16.25F, FontStyle.Bold);
+            Section.ForeColor = Color.FromArgb(203, 203, 205);
+            Section.Location = new Point(63, 440);
+            Section.Margin = new Padding(2);
+            Section.Multiline = true;
+            Section.Name = "Section";
+            Section.PlaceholderText = "  Section";
+            Section.Size = new Size(448, 72);
+            Section.TabIndex = 19;
             // 
             // button2
             // 
@@ -87,7 +89,7 @@
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.Location = new Point(385, 11);
+            button2.Location = new Point(500, 23);
             button2.Margin = new Padding(2);
             button2.Name = "button2";
             button2.Size = new Size(43, 34);
@@ -101,56 +103,56 @@
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.DarkGray;
-            label1.Location = new Point(88, 109);
+            label1.Location = new Point(150, 131);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new Size(278, 33);
             label1.TabIndex = 11;
             label1.Text = "Welcome to our App";
             // 
-            // password
+            // StudentName
             // 
-            password.BackColor = SystemColors.Menu;
-            password.Font = new Font("Microsoft Sans Serif", 16.25F, FontStyle.Bold);
-            password.ForeColor = Color.FromArgb(203, 203, 205);
-            password.Location = new Point(75, 280);
-            password.Margin = new Padding(2);
-            password.Multiline = true;
-            password.Name = "password";
-            password.Size = new Size(300, 48);
-            password.TabIndex = 10;
-            password.Text = "👤 Name";
+            StudentName.BackColor = SystemColors.Menu;
+            StudentName.Font = new Font("Microsoft Sans Serif", 16.25F, FontStyle.Bold);
+            StudentName.ForeColor = Color.FromArgb(203, 203, 205);
+            StudentName.Location = new Point(63, 325);
+            StudentName.Margin = new Padding(2);
+            StudentName.Multiline = true;
+            StudentName.Name = "StudentName";
+            StudentName.PlaceholderText = "👤 Name";
+            StudentName.Size = new Size(448, 72);
+            StudentName.TabIndex = 10;
             // 
-            // button1
+            // RegisterBtn
             // 
-            button1.BackColor = Color.RoyalBlue;
-            button1.Cursor = Cursors.Hand;
-            button1.FlatAppearance.BorderColor = Color.FromArgb(44, 105, 141);
-            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(44, 105, 141);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(66, 462);
-            button1.Margin = new Padding(2);
-            button1.Name = "button1";
-            button1.Size = new Size(300, 67);
-            button1.TabIndex = 9;
-            button1.Text = "Register";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click_1;
+            RegisterBtn.BackColor = Color.RoyalBlue;
+            RegisterBtn.Cursor = Cursors.Hand;
+            RegisterBtn.FlatAppearance.BorderColor = Color.FromArgb(44, 105, 141);
+            RegisterBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(44, 105, 141);
+            RegisterBtn.FlatStyle = FlatStyle.Popup;
+            RegisterBtn.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold);
+            RegisterBtn.ForeColor = Color.White;
+            RegisterBtn.Location = new Point(63, 568);
+            RegisterBtn.Margin = new Padding(2);
+            RegisterBtn.Name = "RegisterBtn";
+            RegisterBtn.Size = new Size(448, 71);
+            RegisterBtn.TabIndex = 9;
+            RegisterBtn.Text = "Register";
+            RegisterBtn.UseVisualStyleBackColor = false;
+            RegisterBtn.Click += button1_Click_1;
             // 
-            // username
+            // ID
             // 
-            username.BackColor = SystemColors.Menu;
-            username.Font = new Font("Microsoft Sans Serif", 16.25F, FontStyle.Bold);
-            username.ForeColor = SystemColors.ScrollBar;
-            username.Location = new Point(75, 209);
-            username.Margin = new Padding(2);
-            username.Multiline = true;
-            username.Name = "username";
-            username.Size = new Size(300, 48);
-            username.TabIndex = 6;
-            username.Text = "\U0001faaa ID";
+            ID.BackColor = SystemColors.Menu;
+            ID.Font = new Font("Microsoft Sans Serif", 16.25F, FontStyle.Bold);
+            ID.ForeColor = SystemColors.ScrollBar;
+            ID.Location = new Point(63, 209);
+            ID.Margin = new Padding(2);
+            ID.Multiline = true;
+            ID.Name = "ID";
+            ID.PlaceholderText = "\U0001faaa ID";
+            ID.Size = new Size(448, 72);
+            ID.TabIndex = 6;
             // 
             // button5
             // 
@@ -175,7 +177,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(224, 224, 224);
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(439, 606);
+            ClientSize = new Size(569, 711);
             Controls.Add(panel1);
             Controls.Add(button5);
             Font = new Font("Microsoft Sans Serif", 8.25F);
@@ -194,12 +196,12 @@
         #endregion
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox password;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox username;
+        private System.Windows.Forms.TextBox StudentName;
+        private System.Windows.Forms.Button RegisterBtn;
+        private System.Windows.Forms.TextBox ID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Section;
     }
 }
