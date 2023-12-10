@@ -16,7 +16,7 @@
 <ol>
   <li><h4>Abdallah</h4>
     <ul>
-      <li>Login Form</li>
+      <li>End Form</li>
       <li>SignUp Form</li>
     </ul>
   </li>
@@ -24,7 +24,7 @@
   <li><h4>Ali</h4>
     <ul>
       <li>Main Form</li>
-      <li>End Form</li>
+      <li>Sign Up Form</li>
     </ul>
   </li>
 
