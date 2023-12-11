@@ -24,9 +24,8 @@ namespace Project
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            SignUpForm SignUp = new SignUpForm();
+            new SignUpForm().Show();
             this.Hide();
-            SignUp.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -38,9 +37,9 @@ namespace Project
         {
             if(ID.Text == "")
             {
-
+                // check 3la eldatabase ya hatem
             }
-            else { MessageBox.Show("Unknown Data"); }
+            else { MessageBox.Show("Unknown Data","inValid input",MessageBoxButtons.OK,MessageBoxIcon.Error); }
         }
     }
 }

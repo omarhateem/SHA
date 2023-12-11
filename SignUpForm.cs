@@ -27,7 +27,7 @@ namespace Project
 
         private void SignUpForm_Load(object sender, EventArgs e)
         {
-            Program.RoundControlCorners(RegisterBtn, 7);
+            Program.RoundControlCorners(SignUpBtn, 7);
             Program.RoundControlCorners(button5, 8);
             Program.RoundControlCorners(StudentName, 15);
             Program.RoundControlCorners(ID, 15);
@@ -102,27 +102,51 @@ namespace Project
 
 
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void Sign_Click(object sender, EventArgs e)
         {
-
-            if (ID.Text == "admin" && StudentName.Text == "admin")
+            bool Flag;
+            foreach(char c in StudentName.Text)
             {
-                this.Hide();
+                Flag = int.TryParse(c.ToString(), out int num);
+                if(Flag)
+                {
+                    MessageBox.Show("InValidName","Name contain numbers",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    StudentName.Text = string.Empty;
+                }
             }
-            else
+            foreach (char c in ID.Text)
             {
-
-                MessageBox.Show("Invalid input");
+                Flag = int.TryParse(c.ToString(), out int num);
+                if (!Flag)
+                {
+                    MessageBox.Show("InValid ID", "ID contain char", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ID.Text = string.Empty;
+                }
             }
-
+            int sec = Convert.ToInt32(Section.Text);
+            if (sec < 1 || sec > 17)
+            {
+                MessageBox.Show("Sections are between 1 : 17","invalid section number",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                Section.Text = string.Empty;
+            }
+            else if(ID.Text == string.Empty||StudentName.Text == string.Empty || Section.Text == string.Empty)
+            {
+                MessageBox.Show("Enter Data in all fields", "Data not Completed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
 
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
-
         }
+
+        private void LoginLabel_Click(object sender, EventArgs e)
+        {
+            new LoginForm().Show();
+            this.Hide();
+        }
+
     }
 }

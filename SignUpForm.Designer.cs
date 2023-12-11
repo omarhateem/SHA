@@ -31,11 +31,13 @@
         {
             label3 = new Label();
             panel1 = new Panel();
+            LoginLabel = new Label();
+            label4 = new Label();
             Section = new TextBox();
             Exit = new Button();
             label1 = new Label();
+            SignUpBtn = new Button();
             StudentName = new TextBox();
-            RegisterBtn = new Button();
             ID = new TextBox();
             button5 = new Button();
             panel1.SuspendLayout();
@@ -56,12 +58,14 @@
             // panel1
             // 
             panel1.BackColor = Color.WhiteSmoke;
+            panel1.Controls.Add(LoginLabel);
+            panel1.Controls.Add(label4);
             panel1.Controls.Add(Section);
             panel1.Controls.Add(Exit);
             panel1.Controls.Add(label1);
+            panel1.Controls.Add(SignUpBtn);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(StudentName);
-            panel1.Controls.Add(RegisterBtn);
             panel1.Controls.Add(ID);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
@@ -69,12 +73,37 @@
             panel1.Size = new Size(569, 711);
             panel1.TabIndex = 2;
             // 
+            // LoginLabel
+            // 
+            LoginLabel.AutoSize = true;
+            LoginLabel.Font = new Font("MS UI Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            LoginLabel.ForeColor = Color.DeepSkyBlue;
+            LoginLabel.Location = new Point(228, 632);
+            LoginLabel.Margin = new Padding(2, 0, 2, 0);
+            LoginLabel.Name = "LoginLabel";
+            LoginLabel.Size = new Size(94, 30);
+            LoginLabel.TabIndex = 21;
+            LoginLabel.Text = "Log in";
+            LoginLabel.Click += LoginLabel_Click;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.DarkGray;
+            label4.Location = new Point(111, 581);
+            label4.Margin = new Padding(2, 0, 2, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(362, 33);
+            label4.TabIndex = 20;
+            label4.Text = "Already have an Account ?";
+            // 
             // Section
             // 
             Section.BackColor = SystemColors.Menu;
             Section.Font = new Font("Microsoft Sans Serif", 16.25F, FontStyle.Bold);
             Section.ForeColor = Color.FromArgb(203, 203, 205);
-            Section.Location = new Point(63, 440);
+            Section.Location = new Point(63, 398);
             Section.Margin = new Padding(2);
             Section.Multiline = true;
             Section.Name = "Section";
@@ -96,7 +125,7 @@
             Exit.TabIndex = 18;
             Exit.Text = "X";
             Exit.UseVisualStyleBackColor = true;
-            Exit.Click += button2_Click;
+            Exit.Click += Exit_Click;
             // 
             // label1
             // 
@@ -110,12 +139,30 @@
             label1.TabIndex = 11;
             label1.Text = "Welcome to our App";
             // 
+            // SignUpBtn
+            // 
+            SignUpBtn.BackColor = Color.RoyalBlue;
+            SignUpBtn.Cursor = Cursors.Hand;
+            SignUpBtn.FlatAppearance.BorderColor = Color.FromArgb(44, 105, 141);
+            SignUpBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(44, 105, 141);
+            SignUpBtn.FlatStyle = FlatStyle.Popup;
+            SignUpBtn.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold);
+            SignUpBtn.ForeColor = Color.White;
+            SignUpBtn.Location = new Point(63, 489);
+            SignUpBtn.Margin = new Padding(2);
+            SignUpBtn.Name = "SignUpBtn";
+            SignUpBtn.Size = new Size(448, 71);
+            SignUpBtn.TabIndex = 9;
+            SignUpBtn.Text = "Register";
+            SignUpBtn.UseVisualStyleBackColor = false;
+            SignUpBtn.Click += Sign_Click;
+            // 
             // StudentName
             // 
             StudentName.BackColor = SystemColors.Menu;
             StudentName.Font = new Font("Microsoft Sans Serif", 16.25F, FontStyle.Bold);
             StudentName.ForeColor = Color.FromArgb(203, 203, 205);
-            StudentName.Location = new Point(63, 325);
+            StudentName.Location = new Point(63, 300);
             StudentName.Margin = new Padding(2);
             StudentName.Multiline = true;
             StudentName.Name = "StudentName";
@@ -123,30 +170,12 @@
             StudentName.Size = new Size(448, 72);
             StudentName.TabIndex = 10;
             // 
-            // RegisterBtn
-            // 
-            RegisterBtn.BackColor = Color.RoyalBlue;
-            RegisterBtn.Cursor = Cursors.Hand;
-            RegisterBtn.FlatAppearance.BorderColor = Color.FromArgb(44, 105, 141);
-            RegisterBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(44, 105, 141);
-            RegisterBtn.FlatStyle = FlatStyle.Popup;
-            RegisterBtn.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold);
-            RegisterBtn.ForeColor = Color.White;
-            RegisterBtn.Location = new Point(63, 568);
-            RegisterBtn.Margin = new Padding(2);
-            RegisterBtn.Name = "RegisterBtn";
-            RegisterBtn.Size = new Size(448, 71);
-            RegisterBtn.TabIndex = 9;
-            RegisterBtn.Text = "Register";
-            RegisterBtn.UseVisualStyleBackColor = false;
-            RegisterBtn.Click += button1_Click_1;
-            // 
             // ID
             // 
             ID.BackColor = SystemColors.Menu;
             ID.Font = new Font("Microsoft Sans Serif", 16.25F, FontStyle.Bold);
             ID.ForeColor = SystemColors.ScrollBar;
-            ID.Location = new Point(63, 209);
+            ID.Location = new Point(63, 204);
             ID.Margin = new Padding(2);
             ID.Multiline = true;
             ID.Name = "ID";
@@ -196,12 +225,14 @@
         #endregion
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox StudentName;
-        private System.Windows.Forms.Button RegisterBtn;
-        private System.Windows.Forms.TextBox ID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button Exit;
-        private System.Windows.Forms.TextBox Section;
+        private Label LoginLabel;
+        private Label label4;
+        private TextBox Section;
+        private TextBox StudentName;
+        private Button SignUpBtn;
+        private TextBox ID;
     }
 }
