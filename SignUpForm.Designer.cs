@@ -31,9 +31,9 @@
         {
             label3 = new Label();
             panel1 = new Panel();
+            comboBoxSections = new ComboBox();
             LoginLabel = new Label();
             label4 = new Label();
-            Section = new TextBox();
             Exit = new Button();
             label1 = new Label();
             SignUpBtn = new Button();
@@ -58,9 +58,9 @@
             // panel1
             // 
             panel1.BackColor = Color.WhiteSmoke;
+            panel1.Controls.Add(comboBoxSections);
             panel1.Controls.Add(LoginLabel);
             panel1.Controls.Add(label4);
-            panel1.Controls.Add(Section);
             panel1.Controls.Add(Exit);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(SignUpBtn);
@@ -72,6 +72,15 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(569, 711);
             panel1.TabIndex = 2;
+            // 
+            // comboBoxSections
+            // 
+            comboBoxSections.FormattingEnabled = true;
+            comboBoxSections.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9","10", "11", "12", "13", "14", "15", "16", "17" });
+            comboBoxSections.Location = new Point(63, 403);
+            comboBoxSections.Name = "comboBoxSections";
+            comboBoxSections.Size = new Size(448, 28);
+            comboBoxSections.TabIndex = 22;
             // 
             // LoginLabel
             // 
@@ -97,19 +106,6 @@
             label4.Size = new Size(362, 33);
             label4.TabIndex = 20;
             label4.Text = "Already have an Account ?";
-            // 
-            // Section
-            // 
-            Section.BackColor = SystemColors.Menu;
-            Section.Font = new Font("Microsoft Sans Serif", 16.25F, FontStyle.Bold);
-            Section.ForeColor = Color.FromArgb(203, 203, 205);
-            Section.Location = new Point(63, 398);
-            Section.Margin = new Padding(2);
-            Section.Multiline = true;
-            Section.Name = "Section";
-            Section.PlaceholderText = "  Section";
-            Section.Size = new Size(448, 72);
-            Section.TabIndex = 19;
             // 
             // Exit
             // 
@@ -230,9 +226,9 @@
         private System.Windows.Forms.Button Exit;
         private Label LoginLabel;
         private Label label4;
-        private TextBox Section;
         private TextBox StudentName;
         private Button SignUpBtn;
         private TextBox ID;
+        private ComboBox comboBoxSections;
     }
 }

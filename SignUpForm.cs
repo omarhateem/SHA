@@ -22,7 +22,6 @@ namespace Project
             ID.MouseClick += remove_placeholder;
             ID.MouseLeave += placeholder_back;
             StudentName.MouseClick += removePass_placeholder;
-            Section.MouseClick += nameremove;
         }
 
         private void SignUpForm_Load(object sender, EventArgs e)
@@ -71,13 +70,6 @@ namespace Project
             ID.MouseClick -= remove_placeholder;
 
         }
-        private void nameremove(object sender, EventArgs e)
-        {
-            Section.ForeColor = Color.Black;
-            Section.Text = string.Empty;
-            Section.MouseClick -= remove_placeholder;
-
-        }
 
 
 
@@ -110,28 +102,30 @@ namespace Project
                 Flag = int.TryParse(c.ToString(), out int num);
                 if(Flag)
                 {
-                    MessageBox.Show("InValidName","Name contain numbers",MessageBoxButtons.OK,MessageBoxIcon.Error);
                     StudentName.Text = string.Empty;
+                    MessageBox.Show("InValidName","Name contain numbers",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    StudentName.Focus();
+                    break;
                 }
             }
             foreach (char c in ID.Text)
             {
-                Flag = int.TryParse(c.ToString(), out int num);
+            Flag = int.TryParse(c.ToString(), out int num);
                 if (!Flag)
                 {
-                    MessageBox.Show("InValid ID", "ID contain char", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     ID.Text = string.Empty;
+                    MessageBox.Show("InValid ID", "ID contain char", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ID.Focus();
+                    break;
                 }
             }
-            int sec = Convert.ToInt32(Section.Text);
-            if (sec < 1 || sec > 17)
-            {
-                MessageBox.Show("Sections are between 1 : 17","invalid section number",MessageBoxButtons.OK,MessageBoxIcon.Error);
-                Section.Text = string.Empty;
-            }
-            else if(ID.Text == string.Empty||StudentName.Text == string.Empty || Section.Text == string.Empty)
+            if(ID.Text == string.Empty||StudentName.Text == string.Empty)
             {
                 MessageBox.Show("Enter Data in all fields", "Data not Completed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                //Insert eladata ya hatem
             }
         }
 
