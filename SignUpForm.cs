@@ -119,7 +119,7 @@ namespace Project
                     break;
                 }
             }
-            if(ID.Text == string.Empty||StudentName.Text == string.Empty)
+            if(ID.Text == string.Empty||StudentName.Text == string.Empty||comboBoxSections.SelectedIndex == -1)
             {
                 MessageBox.Show("Enter Data in all fields", "Data not Completed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
