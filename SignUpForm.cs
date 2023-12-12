@@ -126,6 +126,10 @@ namespace Project
             else
             {
                 //Insert eladata ya hatem
+
+
+                new EndForm().Show();
+                this.Hide();
             }
         }
 

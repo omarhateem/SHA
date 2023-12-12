@@ -38,6 +38,9 @@ namespace Project
             if(ID.Text == "")
             {
                 // check 3la eldatabase ya hatem
+
+                new EndForm().Show();
+                this.Hide();
             }
             else { MessageBox.Show("Unknown Data","inValid input",MessageBoxButtons.OK,MessageBoxIcon.Error); }
         }
