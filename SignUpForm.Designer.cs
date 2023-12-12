@@ -51,7 +51,7 @@
             label3.Location = new Point(187, 41);
             label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(212, 59);
+            label3.Size = new Size(146, 39);
             label3.TabIndex = 0;
             label3.Text = "Sign Up";
             // 
@@ -76,10 +76,10 @@
             // comboBoxSections
             // 
             comboBoxSections.FormattingEnabled = true;
-            comboBoxSections.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9","10", "11", "12", "13", "14", "15", "16", "17" });
+            comboBoxSections.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17" });
             comboBoxSections.Location = new Point(63, 403);
             comboBoxSections.Name = "comboBoxSections";
-            comboBoxSections.Size = new Size(448, 28);
+            comboBoxSections.Size = new Size(448, 21);
             comboBoxSections.TabIndex = 22;
             // 
             // LoginLabel
@@ -90,7 +90,7 @@
             LoginLabel.Location = new Point(228, 632);
             LoginLabel.Margin = new Padding(2, 0, 2, 0);
             LoginLabel.Name = "LoginLabel";
-            LoginLabel.Size = new Size(94, 30);
+            LoginLabel.Size = new Size(65, 20);
             LoginLabel.TabIndex = 21;
             LoginLabel.Text = "Log in";
             LoginLabel.Click += LoginLabel_Click;
@@ -103,7 +103,7 @@
             label4.Location = new Point(111, 581);
             label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(362, 33);
+            label4.Size = new Size(236, 24);
             label4.TabIndex = 20;
             label4.Text = "Already have an Account ?";
             // 
@@ -128,10 +128,10 @@
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.DarkGray;
-            label1.Location = new Point(150, 131);
+            label1.Location = new Point(187, 130);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(278, 33);
+            label1.Size = new Size(184, 24);
             label1.TabIndex = 11;
             label1.Text = "Welcome to our App";
             // 
@@ -198,7 +198,7 @@
             // 
             // SignUpForm
             // 
-            AutoScaleDimensions = new SizeF(10F, 20F);
+            AutoScaleDimensions = new SizeF(6F, 13F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(224, 224, 224);
             BackgroundImageLayout = ImageLayout.Stretch;

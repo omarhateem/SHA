@@ -42,8 +42,10 @@
             label5 = new Label();
             label6 = new Label();
             pictureBox1 = new PictureBox();
+            fileSystemWatcher1 = new FileSystemWatcher();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -98,7 +100,7 @@
             Exit.FlatAppearance.BorderSize = 0;
             Exit.FlatStyle = FlatStyle.Flat;
             Exit.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Exit.Location = new Point(500, 23);
+            Exit.Location = new Point(504, 2);
             Exit.Margin = new Padding(2);
             Exit.Name = "Exit";
             Exit.Size = new Size(43, 34);
@@ -207,6 +209,7 @@
             // pictureBox1
             // 
             pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox1.BorderStyle = BorderStyle.FixedSingle;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(188, 30);
             pictureBox1.Name = "pictureBox1";
@@ -214,6 +217,11 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 28;
             pictureBox1.TabStop = false;
+            // 
+            // fileSystemWatcher1
+            // 
+            fileSystemWatcher1.EnableRaisingEvents = true;
+            fileSystemWatcher1.SynchronizingObject = this;
             // 
             // EndForm
             // 
@@ -234,6 +242,7 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).EndInit();
             ResumeLayout(false);
         }
 
@@ -252,5 +261,6 @@
         private Label label6;
         private Label label5;
         private PictureBox pictureBox1;
+        private FileSystemWatcher fileSystemWatcher1;
     }
 }
