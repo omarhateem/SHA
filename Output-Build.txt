@@ -1,6 +1,0 @@
-﻿Build started at 1:38 AM...
-1>------ Build started: Project: Project, Configuration: Debug Any CPU ------
-1>Skipping analyzers to speed up the build. You can execute 'Build' or 'Rebuild' command to run analyzers.
-1>Project -> C:\OOP project\bin\Debug\net8.0-windows\Project.dll
-========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
-========== Build completed at 1:38 AM and took 07.861 seconds ==========
