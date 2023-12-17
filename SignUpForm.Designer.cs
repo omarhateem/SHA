@@ -3,15 +3,8 @@
     partial class SignUpForm
     {
 
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -23,15 +16,11 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
+            comboBoxSections = new ComboBox();
             label3 = new Label();
             panel1 = new Panel();
-            comboBoxSections = new ComboBox();
             LoginLabel = new Label();
             label4 = new Label();
             Exit = new Button();
@@ -42,25 +31,24 @@
             button5 = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
-            // 
+
             // label3
-            // 
             label3.AutoSize = true;
-            label3.Font = new Font("Microsoft Sans Serif", 25.25F, FontStyle.Bold);
-            label3.ForeColor = Color.Black;
-            label3.Location = new Point(187, 41);
+            label3.Font = new Font("Arial", 25.25F, FontStyle.Bold); // Change font to Arial
+            label3.ForeColor = Color.FromArgb(255, 0, 0); // Change to Red
+            label3.Location = new Point(160, 60);
             label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
             label3.Size = new Size(212, 59);
             label3.TabIndex = 0;
             label3.Text = "Sign Up";
-            // 
+
             // panel1
-            // 
-            panel1.BackColor = Color.WhiteSmoke;
-            panel1.Controls.Add(comboBoxSections);
+            panel1.BackColor = Color.FromArgb(240, 240, 240); // Change to light gray
             panel1.Controls.Add(LoginLabel);
             panel1.Controls.Add(label4);
+            panel1.Controls.Add(comboBoxSections);
+
             panel1.Controls.Add(Exit);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(SignUpBtn);
@@ -72,7 +60,21 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(569, 702);
             panel1.TabIndex = 2;
-            // 
+
+            // comboBoxSections
+            
+
+            // LoginLabel
+            LoginLabel.AutoSize = true;
+            LoginLabel.Font = new Font("Arial", 15F, FontStyle.Bold); // Change font to Arial
+            LoginLabel.ForeColor = Color.FromArgb(0, 128, 0); // Change to Green
+            LoginLabel.Location = new Point(228, 632);
+            LoginLabel.Margin = new Padding(2, 0, 2, 0);
+            LoginLabel.Name = "LoginLabel";
+            LoginLabel.Size = new Size(94, 30);
+            LoginLabel.TabIndex = 21;
+            LoginLabel.Text = "Log in";
+            LoginLabel.Click += LoginLabel_Click;
             // comboBoxSections
             // 
             comboBoxSections.FormattingEnabled = true;
@@ -82,39 +84,25 @@
             comboBoxSections.Size = new Size(448, 28);
             comboBoxSections.TabIndex = 22;
             // 
-            // LoginLabel
-            // 
-            LoginLabel.AutoSize = true;
-            LoginLabel.Font = new Font("MS UI Gothic", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            LoginLabel.ForeColor = Color.DeepSkyBlue;
-            LoginLabel.Location = new Point(228, 632);
-            LoginLabel.Margin = new Padding(2, 0, 2, 0);
-            LoginLabel.Name = "LoginLabel";
-            LoginLabel.Size = new Size(94, 30);
-            LoginLabel.TabIndex = 21;
-            LoginLabel.Text = "Log in";
-            LoginLabel.Click += LoginLabel_Click;
-            // 
             // label4
-            // 
             label4.AutoSize = true;
-            label4.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.DarkGray;
+            label4.Font = new Font("Arial", 14.25F);
+            label4.ForeColor = Color.Black;
             label4.Location = new Point(111, 581);
             label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
             label4.Size = new Size(362, 33);
             label4.TabIndex = 20;
             label4.Text = "Already have an Account ?";
-            // 
+
             // Exit
-            // 
             Exit.BackgroundImageLayout = ImageLayout.Stretch;
             Exit.Cursor = Cursors.Hand;
             Exit.FlatAppearance.BorderSize = 0;
             Exit.FlatStyle = FlatStyle.Flat;
-            Exit.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Exit.Location = new Point(500, 23);
+            Exit.Font = new Font("Arial", 14.25F, FontStyle.Bold);
+            Exit.ForeColor = Color.Black; // Change to White
+            Exit.Location = new Point(500, 10);
             Exit.Margin = new Padding(2);
             Exit.Name = "Exit";
             Exit.Size = new Size(43, 34);
@@ -122,27 +110,25 @@
             Exit.Text = "X";
             Exit.UseVisualStyleBackColor = true;
             Exit.Click += Exit_Click;
-            // 
+
             // label1
-            // 
             label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.DarkGray;
-            label1.Location = new Point(187, 130);
+            label1.Font = new Font("Arial", 14.25F);
+            label1.ForeColor = Color.Blue; // Change to Blue
+            label1.Location = new Point(130, 130);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new Size(278, 33);
             label1.TabIndex = 11;
             label1.Text = "Welcome to our App";
-            // 
+
             // SignUpBtn
-            // 
-            SignUpBtn.BackColor = Color.RoyalBlue;
+            SignUpBtn.BackColor = Color.FromArgb(0, 0, 255); // Change to Blue
             SignUpBtn.Cursor = Cursors.Hand;
             SignUpBtn.FlatAppearance.BorderColor = Color.FromArgb(44, 105, 141);
             SignUpBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(44, 105, 141);
             SignUpBtn.FlatStyle = FlatStyle.Popup;
-            SignUpBtn.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold);
+            SignUpBtn.Font = new Font("Arial", 18F, FontStyle.Bold); // Change font to Arial
             SignUpBtn.ForeColor = Color.White;
             SignUpBtn.Location = new Point(63, 489);
             SignUpBtn.Margin = new Padding(2);
@@ -152,35 +138,32 @@
             SignUpBtn.Text = "Register";
             SignUpBtn.UseVisualStyleBackColor = false;
             SignUpBtn.Click += Sign_Click;
-            // 
+
             // StudentName
-            // 
             StudentName.BackColor = SystemColors.Menu;
-            StudentName.Font = new Font("Microsoft Sans Serif", 16.25F, FontStyle.Bold);
+            StudentName.Font = new Font("Arial", 16.25F, FontStyle.Bold); // Change font to Arial
             StudentName.ForeColor = Color.FromArgb(203, 203, 205);
             StudentName.Location = new Point(63, 300);
             StudentName.Margin = new Padding(2);
             StudentName.Multiline = true;
             StudentName.Name = "StudentName";
-            StudentName.PlaceholderText = "👤 Name";
+            StudentName.PlaceholderText = " Enter your name ";
             StudentName.Size = new Size(448, 72);
             StudentName.TabIndex = 10;
-            // 
+
             // ID
-            // 
             ID.BackColor = SystemColors.Menu;
-            ID.Font = new Font("Microsoft Sans Serif", 16.25F, FontStyle.Bold);
+            ID.Font = new Font("Arial", 16.25F, FontStyle.Bold); // Change font to Arial
             ID.ForeColor = SystemColors.ScrollBar;
             ID.Location = new Point(63, 204);
             ID.Margin = new Padding(2);
             ID.Multiline = true;
             ID.Name = "ID";
-            ID.PlaceholderText = "\U0001faaa ID";
+            ID.PlaceholderText = " Enter your ID ";
             ID.Size = new Size(448, 72);
             ID.TabIndex = 6;
-            // 
+
             // button5
-            // 
             button5.BackgroundImageLayout = ImageLayout.Stretch;
             button5.Cursor = Cursors.Hand;
             button5.FlatAppearance.BorderSize = 0;
@@ -195,9 +178,8 @@
             button5.TabIndex = 1;
             button5.UseVisualStyleBackColor = true;
             button5.Click += button5_Click;
-            // 
+
             // SignUpForm
-            // 
             AutoScaleDimensions = new SizeF(10F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(224, 224, 224);
@@ -205,7 +187,7 @@
             ClientSize = new Size(569, 702);
             Controls.Add(panel1);
             Controls.Add(button5);
-            Font = new Font("Microsoft Sans Serif", 8.25F);
+            Font = new Font("Arial", 8.25F); // Change font to Arial
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(2);
             Name = "SignUpForm";

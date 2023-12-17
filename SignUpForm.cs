@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
+using MySql.Data.MySqlClient;
 
 namespace Project
 {
@@ -126,10 +127,51 @@ namespace Project
             else
             {
                 //Insert eladata ya hatem
+                //Con--> mysql database
+                string server = "localhost";
+                string database = "el_Shorouk_Academy";
+                string username = "root";
+                string password = "";
+
+                string constring = "SERVER=" + server + ";"
+                    + "DATABASE=" + database + ";"
+                    + "UID=" + username + ";"
+                    + "PASSWORD=" + password + ";";
+
+                MySqlConnection conn = new MySqlConnection(constring);
 
 
-                new EndForm().Show();
+                try
+                {
+                    conn.Open();
+
+
+
+
+                    string query = "INSERT INTO `student`(`Id`, `Name`, `Section`)" +
+                                           " VALUES (@Id, @Name, @Section)";
+
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@Id", ID.Text);
+                    cmd.Parameters.AddWithValue("@Name", StudentName.Text);
+                    cmd.Parameters.AddWithValue("@Section",comboBoxSections.SelectedItem.ToString());
+
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+
+                MessageBox.Show("successfully registered");
+                new LoginForm().Show();
                 this.Hide();
+
+                
             }
         }
 
@@ -142,6 +184,7 @@ namespace Project
 
         private void LoginLabel_Click(object sender, EventArgs e)
         {
+
             new LoginForm().Show();
             this.Hide();
         }

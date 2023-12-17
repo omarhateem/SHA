@@ -2,134 +2,86 @@
 {
     partial class MainForm
     {
-        /// <summary>
-        ///  Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
+        private PictureBox pictureBox1;
+        private Button btnLogin;
+        private Button btnRegister;
+        private Label lblWelcome;
 
-        /// <summary>
-        ///  Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
-
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            pictureBox1 = new PictureBox();
-            button1 = new Button();
-            button2 = new Button();
-            label2 = new Label();
-            Exit = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            SuspendLayout();
-            // 
+            this.pictureBox1 = new PictureBox();
+            this.btnLogin = new Button();
+            this.btnRegister = new Button();
+            this.lblWelcome = new Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
+
             // pictureBox1
-            // 
-            pictureBox1.BorderStyle = BorderStyle.FixedSingle;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(166, 48);
-            pictureBox1.Margin = new Padding(4, 5, 4, 5);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(233, 195);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
-            // 
-            // button1
-            // 
-            button1.BackColor = SystemColors.MenuHighlight;
-            button1.FlatAppearance.BorderColor = Color.FromArgb(0, 0, 192);
-            button1.FlatStyle = FlatStyle.Popup;
-            button1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(70, 390);
-            button1.Margin = new Padding(4, 5, 4, 5);
-            button1.Name = "button1";
-            button1.Size = new Size(436, 99);
-            button1.TabIndex = 2;
-            button1.Text = "Login";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
-            // 
-            // button2
-            // 
-            button2.BackColor = SystemColors.MenuHighlight;
-            button2.FlatStyle = FlatStyle.Popup;
-            button2.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.ForeColor = SystemColors.ButtonFace;
-            button2.Location = new Point(70, 522);
-            button2.Margin = new Padding(4, 5, 4, 5);
-            button2.Name = "button2";
-            button2.Size = new Size(436, 89);
-            button2.TabIndex = 3;
-            button2.Text = "Sign up";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.DarkGray;
-            label2.Location = new Point(223, 305);
-            label2.Name = "label2";
-            label2.Size = new Size(110, 33);
-            label2.TabIndex = 13;
-            label2.Text = "HELLO";
-            // 
-            // Exit
-            // 
-            Exit.BackgroundImageLayout = ImageLayout.Stretch;
-            Exit.Cursor = Cursors.Hand;
-            Exit.FlatAppearance.BorderSize = 0;
-            Exit.FlatStyle = FlatStyle.Flat;
-            Exit.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Exit.Location = new Point(511, 18);
-            Exit.Name = "Exit";
-            Exit.Size = new Size(61, 57);
-            Exit.TabIndex = 19;
-            Exit.Text = "X";
-            Exit.UseVisualStyleBackColor = true;
-            // 
+            this.pictureBox1.BorderStyle = BorderStyle.FixedSingle;
+            this.pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            this.pictureBox1.Location = new System.Drawing.Point(150, 50);
+            this.pictureBox1.Margin = new Padding(4, 5, 4, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(300, 200);
+            this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+
+            // btnLogin
+            this.btnLogin.BackColor = Color.Blue;
+            this.btnLogin.FlatStyle = FlatStyle.Popup;
+            this.btnLogin.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            this.btnLogin.ForeColor = Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(150, 300);
+            this.btnLogin.Margin = new Padding(4, 5, 4, 5);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(150, 50);
+            this.btnLogin.TabIndex = 1;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new EventHandler(this.btnLogin_Click);
+
+            // btnRegister
+            this.btnRegister.BackColor = Color.Red;
+            this.btnRegister.FlatStyle = FlatStyle.Popup;
+            this.btnRegister.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            this.btnRegister.ForeColor = Color.White;
+            this.btnRegister.Location = new System.Drawing.Point(300, 300);
+            this.btnRegister.Margin = new Padding(4, 5, 4, 5);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(150, 50);
+            this.btnRegister.TabIndex = 2;
+            this.btnRegister.Text = "Register";
+            this.btnRegister.UseVisualStyleBackColor = false;
+            this.btnRegister.Click += new EventHandler(this.btnRegister_Click);
+
+            // lblWelcome
+            this.lblWelcome.AutoSize = true;
+            this.lblWelcome.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            this.lblWelcome.ForeColor = Color.Black;
+            this.lblWelcome.Location = new System.Drawing.Point(125, 370);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(300, 37);
+            this.lblWelcome.TabIndex = 3;
+            this.lblWelcome.Text = "Welcome to My App!";
+
             // MainForm
-            // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(569, 711);
-            Controls.Add(Exit);
-            Controls.Add(label2);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(pictureBox1);
-            FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(4, 5, 4, 5);
-            Name = "MainForm";
-            Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new SizeF(9F, 20F);
+            this.AutoScaleMode = AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(600, 450);
+            this.Controls.Add(this.lblWelcome);
+            this.Controls.Add(this.btnRegister);
+            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.Margin = new Padding(4, 5, 4, 5);
+            this.Name = "MainForm";
+            this.Text = "MainForm";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
         }
-
-        #endregion
-
-        private PictureBox pictureBox1;
-        private Button button1;
-        private Button button2;
-        private Label label2;
-        private Button Exit;
     }
 }
