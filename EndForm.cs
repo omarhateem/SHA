@@ -41,19 +41,19 @@ namespace Project
             {
                 period = 4;
             }
-            else if (currentSpan >= TimeSpan.Parse("12:45:00") && currentSpan <= TimeSpan.Parse("01:30:00"))
+            else if (currentSpan >= TimeSpan.Parse("12:45:00") && currentSpan <= TimeSpan.Parse("13:30:00"))
             {
                 period = 5;
             }
-            else if (currentSpan >= TimeSpan.Parse("01:30:00") && currentSpan <= TimeSpan.Parse("02:10:00"))
+            else if (currentSpan >= TimeSpan.Parse("13:30:00") && currentSpan <= TimeSpan.Parse("14:10:00"))
             {
                 period = 6;
             }
-            else if (currentSpan >= TimeSpan.Parse("02:20:00") && currentSpan <= TimeSpan.Parse("03:00:00"))
+            else if (currentSpan >= TimeSpan.Parse("14:20:00") && currentSpan <= TimeSpan.Parse("15:00:00"))
             {
                 period = 7;
             }
-            else if (currentSpan >= TimeSpan.Parse("03:00:00") && currentSpan <= TimeSpan.Parse("03:45:00"))
+            else if (currentSpan >= TimeSpan.Parse("15:00:00") && currentSpan <= TimeSpan.Parse("15:45:00"))
             {
                 period = 8;
             }
