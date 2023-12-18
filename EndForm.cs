@@ -13,13 +13,57 @@ namespace Project
 
         private void EndForm_Load(object sender, EventArgs e)
         {
-            const string TimeFormat = "HH:mm:00";
-            string currentTime = DateTime.Now.ToString(TimeFormat);
             const string DateFormat = "dddd";
             string currentDate = DateTime.Now.ToString(DateFormat);
             string secnum = "";
-
             string idf = LoginForm.instant.id2.Text;
+            //-------------------------------------------
+            const string TimeFormat = "HH:mm:ss";
+            string currentTime = DateTime.Now.ToString(TimeFormat);
+            int period = 0; // Default value
+
+            // Check the time range to determine the period
+            TimeSpan currentSpan = DateTime.Now.TimeOfDay;
+
+            if (currentSpan >= TimeSpan.Parse("09:15:00") && currentSpan <= TimeSpan.Parse("10:00:00"))
+            {
+                period = 1;
+            }
+            else if (currentSpan >= TimeSpan.Parse("10:00:00") && currentSpan <= TimeSpan.Parse("10:45:00"))
+            {
+                period = 2;
+            }
+            else if (currentSpan >= TimeSpan.Parse("10:55:00") && currentSpan <= TimeSpan.Parse("11:40:00"))
+            {
+                period = 3;
+            }
+            else if (currentSpan >= TimeSpan.Parse("11:40:00") && currentSpan <= TimeSpan.Parse("12:25:00"))
+            {
+                period = 4;
+            }
+            else if (currentSpan >= TimeSpan.Parse("12:45:00") && currentSpan <= TimeSpan.Parse("01:30:00"))
+            {
+                period = 5;
+            }
+            else if (currentSpan >= TimeSpan.Parse("01:30:00") && currentSpan <= TimeSpan.Parse("02:10:00"))
+            {
+                period = 6;
+            }
+            else if (currentSpan >= TimeSpan.Parse("02:20:00") && currentSpan <= TimeSpan.Parse("03:00:00"))
+            {
+                period = 7;
+            }
+            else if (currentSpan >= TimeSpan.Parse("03:00:00") && currentSpan <= TimeSpan.Parse("03:45:00"))
+            {
+                period = 8;
+            }
+            else
+            {
+                period = 9;
+
+            }
+
+            //-------------------------------------------
             string server = "localhost";
             string database = "el_Shorouk_Academy";
             string username = "root";
@@ -45,7 +89,7 @@ namespace Project
                                 while (studentReader.Read())
                                 {
                                     label7.Text = studentReader["Name"].ToString();
-                                    secnum= studentReader["Section"].ToString();
+                                    secnum = studentReader["Section"].ToString();
                                     Sectionback.Text = studentReader["Section"].ToString();
 
                                 }
@@ -58,30 +102,39 @@ namespace Project
                     }
 
                     // Query for schedule information
-                    string scheduleQuery = $"SELECT Mentor_Name, Name FROM `schedule` WHERE `TIME` = @currentTime AND `Day`= @currentDate AND `Section_Num` = @secnum ";
-                    using (MySqlCommand scheduleCommand = new MySqlCommand(scheduleQuery, conn))
+                    if (period > 0 && period < 9)
                     {
-                        scheduleCommand.Parameters.AddWithValue("@currentTime", currentTime);
-                        scheduleCommand.Parameters.AddWithValue("@currentDate", currentDate);
-                        scheduleCommand.Parameters.AddWithValue("@secnum", secnum);
-
-
-                        using (MySqlDataReader scheduleReader = scheduleCommand.ExecuteReader())
+                        string scheduleQuery = $"SELECT Mentor_Name, Name FROM `schedule` WHERE `period` = @period AND `Day`= @currentDate AND `Section_Num` = @secnum ";
+                        using (MySqlCommand scheduleCommand = new MySqlCommand(scheduleQuery, conn))
                         {
-                            if (scheduleReader.HasRows)
+                            scheduleCommand.Parameters.AddWithValue("@period", period);
+                            scheduleCommand.Parameters.AddWithValue("@currentDate", currentDate);
+                            scheduleCommand.Parameters.AddWithValue("@secnum", secnum);
+
+
+                            using (MySqlDataReader scheduleReader = scheduleCommand.ExecuteReader())
                             {
-                                while (scheduleReader.Read())
+                                if (scheduleReader.HasRows)
                                 {
-                                    Subjectb.Text = scheduleReader["Name"].ToString();
-                                    Instructorback.Text = scheduleReader["Mentor_Name"].ToString();
+                                    while (scheduleReader.Read())
+                                    {
+                                        Subjectb.Text = scheduleReader["Name"].ToString();
+                                        Instructorback.Text = scheduleReader["Mentor_Name"].ToString();
+                                    }
                                 }
-                            }
-                            else
-                            {
-                                Instructorback.Text = "No schedule Now";
+                                else
+                                {
+                                    Instructorback.Text = "No schedule Now";
+                                }
                             }
                         }
                     }
+                    else if (period == 9)
+                    {
+                        Instructorback.Text = "No schedule Now";
+                        Subjectb.Text = "No schedule Now";
+                    }
+
                 }
                 catch (Exception ex)
                 {
