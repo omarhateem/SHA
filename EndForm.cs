@@ -90,7 +90,7 @@ namespace Project
                                 {
                                     label7.Text = studentReader["Name"].ToString();
                                     secnum = studentReader["Section"].ToString();
-                                    Sectionback.Text = studentReader["Section"].ToString();
+                                   // Sectionback.Text = studentReader["Section"].ToString();
 
                                 }
                             }
@@ -104,7 +104,7 @@ namespace Project
                     // Query for schedule information
                     if (period > 0 && period < 9)
                     {
-                        string scheduleQuery = $"SELECT Mentor_Name, Name FROM `schedule` WHERE `period` = @period AND `Day`= @currentDate AND `Section_Num` = @secnum ";
+                        string scheduleQuery = $"SELECT Mentor_Name, Name, Section_Place FROM `schedule` WHERE `period` = @period AND `Day`= @currentDate AND `Section_Num` = @secnum ";
                         using (MySqlCommand scheduleCommand = new MySqlCommand(scheduleQuery, conn))
                         {
                             scheduleCommand.Parameters.AddWithValue("@period", period);
@@ -120,10 +120,13 @@ namespace Project
                                     {
                                         Subjectb.Text = scheduleReader["Name"].ToString();
                                         Instructorback.Text = scheduleReader["Mentor_Name"].ToString();
+                                        Sectionback.Text = scheduleReader["Section_Place"].ToString();
                                     }
                                 }
                                 else
                                 {
+                                    Subjectb.Text = "No schedule Now";
+                                    Sectionback.Text = "No schedule Now";
                                     Instructorback.Text = "No schedule Now";
                                 }
                             }
